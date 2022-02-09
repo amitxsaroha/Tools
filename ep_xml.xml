@@ -1,0 +1,1036 @@
+<!-- edited by Rob Feng (Dell). Metadata XML for Oracle -->
+<Operations autoAppendPeriod="False">
+    <Operation value="ALTER INDEX STATEMENT" bitmap="BID_ALTER_INDEX_STATEMENT" help="450264">
+        <PlainLanguage desc="Alters Index."/>
+    </Operation>
+    <Operation value="AND-EQUAL" bitmap="BID_AND_EQUALS" help="450012">
+        <PlainLanguage desc="Rows retrieved by %%c0 are combined and rows common to all are returned."/>
+    </Operation>
+    <Operation value="APPROXIMATE NDV" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="AW SCAN" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="BITMAP AND" bitmap="BID_BITMAP_AND" help="450025">
+        <PlainLanguage desc="A logical AND operation was performed on the bitmaps from %%c0."/>
+    </Operation>
+    <Operation value="BITMAP COMPACTION" bitmap="BID_BITMAP_INDEX" help="450265">
+        <PlainLanguage desc="Compacts a bitmap index."/>
+    </Operation>
+    <Operation value="BITMAP CONSTRUCTION" bitmap="BID_BITMAP_INDEX" help="450266">
+        <PlainLanguage desc="Converts column values to a bitmap."/>
+    </Operation>
+    <Operation value="BITMAP CONVERSION" bitmap="BID_BITMAP_CONVERSION" help="450026">
+        <Options>
+            <Option value="COUNT" bitmap="" help="450359">
+                <PlainLanguage desc="The bitmaps from %%c0 were converted to ROWIDs and distinct row counts were returned."/>
+            </Option>
+            <Option value="FROM ROWIDS" bitmap="" help="450360">
+                <PlainLanguage desc="Rows retrieved in %%c0 were converted to bitmaps."/>
+            </Option>
+            <Option value="TO ROWIDS" bitmap="" help="450361">
+                <PlainLanguage desc="The bitmaps returned from %%c0 were converted to ROWIDs."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="BITMAP INDEX" bitmap="BID_BITMAP_INDEX" help="450027">
+        <PlainLanguage desc="Rows were retrieved from the bitmap index %%on."/>
+        <Options>
+            <Option value="FAST FULL SCAN" help="450362">
+                <PlainLanguage desc="Accesses all entries in a bitmap index."/>
+            </Option>
+            <Option value="FULL SCAN" help="450363">
+                <PlainLanguage desc="All the entries in the bitmap index %%on were accessed."/>
+            </Option>
+            <Option value="RANGE SCAN" help="450364">
+                <PlainLanguage desc="Some of the entries in the bitmap index %%on were accessed."/>
+            </Option>
+            <Option value="SINGLE VALUE" help="450365">
+                <PlainLanguage desc="Rows in the bitmap index %%on matching a specific value were accessed."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="BITMAP JOIN INDEX UPDATE" bitmap="BID_BITMAP_INDEX" help="450267">
+        <PlainLanguage desc="Updates a bitmap join index after statement execution."/>
+    </Operation>
+    <Operation value="BITMAP JOIN INDEX UPDATE STATEMENT" bitmap="BID_BITMAP_INDEX" help="450268">
+        <PlainLanguage desc="Updates a bitmap index after statement execution as seen in V$SQL_PLAN view."/>
+    </Operation>
+    <Operation value="BITMAP KEY ITERATION" bitmap="BID_BITMAP_KEY_ITERATOR" help="450028">
+        <PlainLanguage desc="For each row retrieved from %%c1, perform the bitmap operation in %%c2."/>
+    </Operation>
+    <Operation value="BITMAP MERGE" bitmap="BID_BITMAP_MERGE" help="450029">
+        <PlainLanguage desc="The bitmaps from %%c0 were merged into a single bitmap."/>
+    </Operation>
+    <Operation value="BITMAP MINUS" bitmap="BID_BITMAP_MINUS" help="450030">
+        <PlainLanguage desc="Retrieves rows from a first bitmat index that are not in a second bitmap index."/>
+    </Operation>
+    <Operation value="BITMAP OR" bitmap="BID_BITMAP_OR" help="450032">
+        <PlainLanguage desc="A logical OR operation was performed on the bitmaps from %%c0."/>
+    </Operation>
+    <Operation value="BULK BINDS GET" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="BUFFER" bitmap="" help="">
+        <Options>
+            <Option value="SORT" bitmap="BID_BUFFER_SORT" help="450269">
+                <PlainLanguage desc="Reads frequently accessed data during statement execution into private memory to reduce overhead."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="COLLECTION ITERATOR" bitmap="BID_INLIST_ITERATOR" help="450041">
+        <PlainLanguage desc="Retrieves a collection of rows from table functions created using PL/SQL."/>
+        <Options>
+            <Option value="CONSTRUCTOR FETCH" help="450403"/>
+            <Option value="PICKLER FETCH" help="450404"/>
+            <Option value="SUBQUERY FETCH" help="450405"/>
+        </Options>
+    </Operation>
+    <Operation value="CONCATENATION" bitmap="BID_CONCATENATION" help="450049">
+        <PlainLanguage desc="All distinct rows from %%c0 were returned."/>
+    </Operation>
+    <Operation value="CONNECT BY" bitmap="BID_CONNECT_BY" help="450050">
+        <PlainLanguage desc="Starting with the row identified in %%c1 perform a hierarchial query using %%c2 and %%c3."/>
+        <Options>
+            <Option value="ANTI" bitmap="BID_CONNECT_BY_ANTI" help="450014"/>
+            <Option value="CARTESIAN" bitmap="BID_CONNECT_BY_CARTESIAN" help="450035"/>
+            <Option value="OUTER" bitmap="BID_CONNECT_BY_OUTER" help="450149"/>
+            <Option value="SEMI" bitmap="BID_CONNECT_BY_SEMI" help="450181"/>
+            <Option value="WITH FILTERING" bitmap="" help="450090"/>
+            <Option value="WITHOUT FILTERING" bitmap="" help="450050"/>
+        </Options>
+    </Operation>
+    <Operation value="CONNECT BY PUMP" bitmap="BID_CONNECT_BY_PUMP" help="450270">
+        <PlainLanguage desc="Executes a hierarchical self-join."/>
+    </Operation>
+    <Operation value="COUNT" bitmap="BID_COUNT" help="450059">
+        <PlainLanguage desc="The rows in the result set from %%c1 were counted."/>
+        <Options>
+            <Option value="STOPKEY" bitmap="BID_COUNT_STOP_KEY" help="450060">
+                <PlainLanguage desc="Processing was stopped when the specified number of rows from %%c1 were processed."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="CREATE AS SELECT" bitmap="BID_CREATE_AS_SELECT" help="450271">
+        <PlainLanguage desc="Creates a table using selected information from another table."/>
+    </Operation>
+    <Operation value="CREATE INDEX STATEMENT" bitmap="BID_CREATE_INDEX_STATEMENT" help="450366">
+        <PlainLanguage desc="Creates index."/>
+    </Operation>
+    <Operation value="CREATE TABLE STATEMENT" bitmap="BID_CREATE_TABLE_STATEMENT" help="450367">
+        <PlainLanguage desc="Creates table."/>
+    </Operation>
+    <Operation value="CUBE ACCESS" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="CUBE JOIN" bitmap="BID_GENERATE_CUBE" help="450350">
+        <PlainLanguage desc="Joins a view or table from the left and a cube from the right."/>
+        <Options>
+            <Option value="ANTI" help="450351">
+                <PlainLanguage desc="Uses an Anti-Join to query a view or table from the left and a cube from the right."/>
+            </Option>
+            <Option value="ANTI SNA" help="450352">
+                <PlainLanguage desc="Uses a Single-Sided Null-Aware Anti-Join for a view or table from the left and a cube from the right. The right join column (cube side) is NOT NULL."/>
+            </Option>
+            <Option value="OUTER" help="450353">
+                <PlainLanguage desc="Uses an Outer Join to query a view or table from the left and a cube from the right."/>
+            </Option>
+            <Option value="RIGHT SEMI" help="450354">
+                <PlainLanguage desc="Uses a RIGHT Semi-Join to query to query a view or table from the left and a cube from the right."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="CUBE SCAN" bitmap="BID_GENERATE_CUBE" help="450262">
+        <PlainLanguage desc="Retrieves cube organized data with inner join operations."/>
+        <Options>
+            <Option value="PARTIAL OUTER" help="450273">
+                <PlainLanguage desc="Retrieves data from at least one dimension of a cube with outer join operations while retrieving the rest of the dimensions of a cube with inner join operations."/>
+            </Option>
+            <Option value="OUTER" help="450274">
+                <PlainLanguage desc="Retrieves cube organized data with outer join operations."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="CUBE TABLE ACCESS" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="CUBE TABLE SCAN" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DDL STATEMENT" bitmap="BID_DDL_STATEMENT" help="450275">
+        <PlainLanguage desc="Data Definition Language statements that display in the V$SQL_PLAN view."/>
+    </Operation>
+    <Operation value="DECISION TREE CLASSIFICATION" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DELETE" bitmap="BID_DELETE" help="450071">
+        <PlainLanguage desc="Rows were deleted."/>
+    </Operation>
+    <Operation value="DELETE STATEMENT" bitmap="BID_DELETE" help="450071">
+        <PlainLanguage desc="Rows were deleted."/>
+        <Options>
+            <Option value="REMOTE" bitmap="" help="450368">
+                <PlainLanguage desc="Rows were remotely deleted."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="DETECT END" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DIRECT LOAD INTO" bitmap="BID_INSERT" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DM EXP MAX AGGR" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DM EXP MAX PAR" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DM FEED PREDICTOR-TARGET PAIRS" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DM HASH-BROADCAST COUNTS" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DM SUPERVISED BINNING" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DOMAIN INDEX" bitmap="BID_DOMAIN_INDEX" help="450077">
+        <PlainLanguage desc="Rows were retrieved using a domain index %%on."/>
+    </Operation>
+    <Operation value="DOMAIN INDEX BUILD" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DOMAIN INDEX PARTITION BUILD" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DST DETECT END" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DST ENUMERATE FEED" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DST PRUNE" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DST RECURSIVE ITERATION" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="DST SPLIT" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="ERROR LOGGING" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="EXPRESSION EVALUATION" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="EXTERNAL TABLE ACCESS" bitmap="BID_EXTERNAL_TABLE_ACCESS" help="450369">
+        <PlainLanguage desc="Retrieves data from an external table."/>
+        <Options>
+            <Option value="FULL" help="450370">
+                <PlainLanguage desc="Retrieves all data from an external table."/>
+            </Option>
+            <Option value="SAMPLE" help="450371">
+                <PlainLanguage desc="Retrieves a portion of the data from an external table."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="FAST DUAL" bitmap="BID_SELECT" help="450372">
+        <PlainLanguage desc="Reduces reads to data stored in a DUAL table."/>
+    </Operation>
+    <Operation value="FAULT-TOLERANCE BUFFER" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="FIC DETECT END" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="FIC ENUMERATE FEED" bitmap="BID_FIC" help="450373">
+        <PlainLanguage desc="An operation used during Frequent Itemset Counting."/>
+    </Operation>
+    <Operation value="FIC LOAD BITMAPS" bitmap="BID_FIC" help="450374">
+        <PlainLanguage desc="An operation used during Frequent Itemset Counting."/>
+    </Operation>
+    <Operation value="FIC LOAD ITEMSETS" bitmap="BID_FIC" help="450375">
+        <PlainLanguage desc="An operation used during Frequent Itemset Counting."/>
+    </Operation>
+    <Operation value="FIC RECURSIVE ITERATION" bitmap="BID_FIC" help="450376">
+        <PlainLanguage desc="An operation used during Frequent Itemset Counting."/>
+    </Operation>
+    <Operation value="FIFO BUFFER" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="FILTER" bitmap="BID_FILTER_STEP" help="450406">
+        <PlainLanguage desc="For the rows returned by %%c1, filter out rows depending on filter criteria."/>
+    </Operation>
+    <Operation value="FIRST ROW" bitmap="BID_FIRST_ROW" help="450091">
+        <PlainLanguage desc="Only the first row of the result set from %%c1 was processed."/>
+    </Operation>
+    <Operation value="FIXED TABLE" bitmap="BID_FIXED_TABLE" help="450093">
+        <PlainLanguage Desc="Rows in the fixed table %%on are read."/>
+        <Options>
+            <Option value="FIXED INDEX" bitmap="" help="450092">
+                <PlainLanguage desc="Reads fixed table %%on using index column."/>
+            </Option>
+            <Option value="FIXED INDEX #1" bitmap="" help="450407"/>
+            <Option value="FIXED INDEX #2" bitmap="" help="450408"/>
+            <Option value="FIXED INDEX #3" bitmap="" help="450409"/>
+            <Option value="FIXED INDEX #4" bitmap="" help="450410"/>
+            <Option value="FIXED INDEX #5" bitmap="" help="450411"/>
+            <Option value="FULL" bitmap="" help="450413">
+                <PlainLanguage Desc="Every row in the fixed table %%on is read."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="FIXED INDEX" bitmap="BID_FIXED_TABLE" help="450412">
+        <PlainLanguage Desc="Rows in the fixed table %%on are read."/>
+    </Operation>
+    <Operation value="FOR UPDATE" bitmap="BID_UPDATE" help="450094">
+        <PlainLanguage desc="Lock the rows returned by %%c0."/>
+    </Operation>
+    <Operation value="FREQUENT ITEMSET COUNTING" bitmap="BID_FIC" help="450378">
+        <PlainLanguage desc="Keeps track of the number of times a frequent itemset is used."/>
+    </Operation>
+    <Operation value="GENERATE" help="450379">
+        <Options>
+            <Option value="CUBE" bitmap="BID_GENERATE_CUBE" help="450379">
+                <PlainLanguage desc="Oraganizes data into a cube."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="GRANULE ITERATOR" bitmap="BID_GRANULE_ITERATOR" help="450380">
+        <PlainLanguage Desc="Indicates a scan slave accessed data in a parallel execution plan."/>
+        <Options>
+            <Option value="EXTERNAL CHUNK" bitmap="" help="450381"/>
+            <Option value="PARTITION" bitmap="" help="450382"/>
+            <Option value="ROWID RANGE" bitmap="" help="450383"/>
+        </Options>
+    </Operation>
+    <Operation value="HASH" bitmap="BID_HASH_JOIN" help="">
+        <Options>
+            <Option value="GROUP BY" help="450276">
+                <PlainLanguage desc="Indexes and retrieves rows using hashing, and then organizes rows into groups."/>
+            </Option>
+            <Option value="GROUP BY PIVOT" help="450277">
+                <PlainLanguage desc="Indexes and retrieves rows using hashing, and then organizes rows into groups in a pivot table."/>
+            </Option>
+            <Option value="UNIQUE" help="450278">
+                <PlainLanguage desc="Indexes and retrieves distinct rows using hashing."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="HASH JOIN" bitmap="BID_HASH_JOIN" help="450102">
+        <PlainLanguage desc="The result sets from %%c0 were joined (hash)."/>
+        <Options>
+            <Option value="ANTI" bitmap="" help="450014">
+                <PlainLanguage desc="Rows from %%c1 which matched rows from %%c2 were eliminated (hash anti-join)."/>
+            </Option>
+            <Option value="BUFFERED" bitmap="" help="450279">
+                <PlainLanguage desc="Joins buffered rows from %%c1 that match buffered rows from %%c2."/>
+            </Option>
+            <Option value="CARTESIAN" bitmap="BID_HASH_JOIN_CARTESIAN" help="450035">
+                <PlainLanguage desc="Rows from %%c1 which matched rows from %%c2 were returned (hash join)."/>
+            </Option>
+            <Option value="OUTER" bitmap="" help="450399">
+                <PlainLanguage desc="Rows from %%c1 which matched rows from %%c2 were returned (hash join)."/>
+            </Option>
+            <Option value="RIGHT OUTER" bitmap="" help="450384">
+                <PlainLanguage desc="Uses a hash right outer join."/>
+            </Option>
+            <Option value="RIGHT ANTI" bitmap="" help="450385">
+                <PlainLanguage desc="Uses a hash right antijoin."/>
+            </Option>
+            <Option value="RIGHT SEMI" bitmap="" help="450386">
+                <PlainLanguage desc="Uses a hash right semijoin."/>
+            </Option>
+            <Option value="SEMI" bitmap="" help="450387">
+                <PlainLanguage desc="Rows from %%c1 which matched rows from %%c2 were returned (hash join)."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="INDEX" bitmap="BID_INDEX_GENERIC" help="450106">
+        <Options>
+            <Option value="FAST FULL SCAN" bitmap="BID_INDEX_FAST_FULL_SCAN" help="450089">
+                <PlainLanguage desc="Rows were retrieved by performing a fast read of all index records in %%on."/>
+            </Option>
+            <Option value="FULL SCAN" bitmap="BID_INDEX_FULL_SCAN" help="450096">
+                <PlainLanguage desc="Rows were retrieved by performing a sequential read of all records in index %%on in ascending order."/>
+            </Option>
+            <Option value="FULL SCAN DESCENDING" bitmap="" help="450098">
+                <PlainLanguage desc="Rows were retrieved by performing a sequential read of all records in index %%on in descending order."/>
+            </Option>
+            <Option value="FULL SCAN (MIN/MAX)" bitmap="BID_INDEX_FULL_SCAN_MIN_MAX" help="450097">
+                <PlainLanguage desc="All records of index %%on were scanned to support a MIN/MAX operation."/>
+            </Option>
+            <Option value="RANGE SCAN" bitmap="BID_INDEX_RANGE_SCAN" help="450108">
+                <PlainLanguage desc="One or more rows were retrieved using index %%on. The index was scanned in ascending order."/>
+            </Option>
+            <Option value="RANGE SCAN DESCENDING" bitmap="" help="450110">
+                <PlainLanguage desc="One or more rows were retrieved using index %%on. The index was scanned in descending order."/>
+            </Option>
+            <Option value="RANGE SCAN (MIN/MAX)" bitmap="" help="450109">
+                <PlainLanguage desc="The index %%on was scanned to support a MIN/MAX operation."/>
+            </Option>
+            <Option value="SAMPLE FAST FULL SCAN" bitmap="BID_INDEX_FAST_FULL_SCAN" help="450280">
+                <PlainLanguage desc="Retrieves rows by performing a fast read on a portion of the index records."/>
+            </Option>
+            <Option value="SKIP SCAN" bitmap="" help="450281">
+                <PlainLanguage desc="Rows were retrieved from concatenated index %%on without using the leading column(s)."/>
+            </Option>
+            <Option value="SKIP SCAN DESCENDING" bitmap="" help="450282">
+                <PlainLanguage desc="Retrieves rows from a concatenated index without using the leading column in descending order."/>
+            </Option>
+            <Option value="UNIQUE SCAN" bitmap="BID_INDEX_UNIQUE_SCAN" help="450111">
+                <PlainLanguage desc="Rows were retrieved using the unique index %%on."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="INDEX BUILD" bitmap="BID_INDEX_BUILD" help="">
+        <Options>
+            <Option value="NON UNIQUE" bitmap="" help="450283">
+                <PlainLanguage desc="Builds an index where the ROWIDs are associated with the table."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="INDEX MAINTENANCE" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="INLIST ITERATOR" bitmap="BID_INLIST_ITERATOR" help="450114">
+        <PlainLanguage desc="The operation in %%c1 was repeated for each of the values in an IN list."/>
+        <Options>
+            <Option value="CONCATENATED" bitmap="" help="450414">
+                <PlainLanguage desc="Combines and repeats similar operations for each value of the IN list."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="INSERT" bitmap="BID_INSERT" help="450116">
+        <PlainLanguage desc="Rows were inserted."/>
+    </Operation>
+    <Operation value="INSERT STATEMENT" bitmap="BID_INSERT" help="450116">
+        <PlainLanguage desc="Rows were inserted."/>
+        <Options>
+            <Option value="REMOTE" bitmap="" help="450388">
+                <PlainLanguage desc="Rows were remotely inserted."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="INTERSECTION" bitmap="BID_INTERSECTION" help="450118">
+        <PlainLanguage desc="Return all rows which are included in all of the results sets returned by %%c0."/>
+    </Operation>
+    <Operation value="INTO" bitmap="BID_INSERT" help="450284">
+        <PlainLanguage desc="Indicates data was inserted using multi-table insert function."/>
+    </Operation>
+    <Operation value="JOIN" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="JOIN FILTER" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="JOIN-FILTER" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="JOINED CUBE SCAN" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="JOINED CUBE TABLE SCAN" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="LOAD AS SELECT" bitmap="BID_SELECT" help="450126">
+        <PlainLanguage desc="The rows from %%c1 were inserted into %%on using direct-load insert."/>
+    </Operation>
+    <Operation value="LOAD TABLE CONVENTIONAL" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="MATCH RECOGNIZE" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="MAT_VIEW ACCESS" bitmap="BID_VIEW_REFERENCE" help="">
+        <Options>
+            <Option value="BY INDEX ROWID" bitmap="" help="450285">
+                <PlainLanguage desc="Retrieves data from a materialized view based on index ROWIDs."/>
+            </Option>
+            <Option value="BY ROWID RANGE" bitmap="" help="450286">
+                <PlainLanguage desc="Retrieves data from a materialized view based on a provided range of ROWIDs."/>
+            </Option>
+            <Option value="BY USER ROWID" bitmap="" help="450287">
+                <PlainLanguage desc="Retrieves data from a materialized view based on a specific ROWID."/>
+            </Option>
+            <Option value="FULL" bitmap="" help="450288">
+                <PlainLanguage desc="Retrieves data based on a full table scan of a materialized view."/>
+            </Option>
+            <Option value="SAMPLE" bitmap="" help="450289">
+                <PlainLanguage desc="Retrieves data based on a full table sample scan of a materialized view."/>
+            </Option>
+            <Option value="SAMPLE BY ROWID RANGE" bitmap="" help="450290">
+                <PlainLanguage desc="Retrieves data based on a full table sample scan for a provided range of ROWIDs of a materialized view."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="MAT_VIEW CUBE ACCESS" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="MAT_VIEW REWRITE ACCESS" bitmap="BID_VIEW_REFERENCE" help="">
+        <Options>
+            <Option value="BY GLOBAL INDEX ROWID" bitmap="" help="450291">
+                <PlainLanguage desc="Retrieves data from a materialized view based on global index ROWIDs after a query rewrite."/>
+            </Option>
+            <Option value="BY INDEX ROWID" bitmap="" help="450292">
+                <PlainLanguage desc="Retrieves data from a materialized view based on index ROWIDs after a query rewrite."/>
+            </Option>
+            <Option value="BY LOCAL INDEX ROWID" bitmap="" help="450293">
+                <PlainLanguage desc="Retrieves data from a materialized view based on local index ROWIDs after a query rewrite."/>
+            </Option>
+            <Option value="BY ROWID RANGE" bitmap="" help="450294">
+                <PlainLanguage desc="Retrieves data from a materialized view based on a provided range of ROWIDs after a query rewrite."/>
+            </Option>
+            <Option value="BY USER ROWID" bitmap="" help="450355">
+                <PlainLanguage desc="Access method when user-supplied ROWIDs are used to locate materialized view rows."/>
+            </Option>
+            <Option value="CLUSTER" bitmap="" help="450295">
+                <PlainLanguage desc="Retrieves data using an index cluster key from a materialized view after a query rewrite."/>
+            </Option>
+            <Option value="FULL" bitmap="" help="450296">
+                <PlainLanguage desc="Retrieves data based on a full table scan of a materialized view after a query rewrite."/>
+            </Option>
+            <Option value="SAMPLE" bitmap="" help="450297">
+                <PlainLanguage desc="Retrieves data based on a full table sample scan of a materialized view after a query rewrite."/>
+            </Option>
+            <Option value="SAMPLE BY ROWID RANGE" help="450356">
+                <PlainLanguage desc="Use to retrieve sampled rows from a materialized view when based on a ROWID range."/>
+            </Option>
+            <Option value="HASH" bitmap="" help="450298">
+                <PlainLanguage desc="Retrieves data using a hash cluster key from a materialized view after a query rewrite."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="MAT_VIEW REWRITE CUBE ACCESS" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="MERGE" bitmap="BID_MERGE" help="450138">
+        <PlainLanguage desc="Rows were merged."/>
+    </Operation>
+    <Operation value="MERGE STATEMENT" bitmap="BID_MERGE" help="450138">
+        <PlainLanguage desc="Rows were merged."/>
+        <Options>
+            <Option value="REMOTE" bitmap="" help="450389">
+                <PlainLanguage desc="Rows were remotely merged."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="MERGE JOIN" bitmap="BID_MERGE_JOIN_INNER" help="450397">
+        <PlainLanguage desc="Join the sorted results sets provided from %%c0."/>
+        <Options>
+            <Option value="ANTI" bitmap="BID_MERGE_JOIN_ANTI" help="450014">
+                <PlainLanguage desc="Rows from %%c1 which matched rows from %%c2 were eliminated (merge anti-join)."/>
+            </Option>
+            <Option value="CARTESIAN" bitmap="BID_MERGE_JOIN_CARTESIAN" help="450035">
+                <PlainLanguage desc="Every row in %%c1 was joined to every row in %%c2."/>
+            </Option>
+            <Option value="OUTER" bitmap="BID_MERGE_JOIN_OUTER" help="450400">
+                <PlainLanguage desc="Join the results sets provided from %%c0 If there are not matching rows from %%c2 return null values for those columns."/>
+            </Option>
+            <Option value="SEMI" bitmap="BID_MERGE_JOIN_SEMI" help="450181">
+                <PlainLanguage desc="Rows from %%c1 which matched rows from %%c2 were returned (hash join)."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="MINUS" bitmap="BID_MINUS" help="450140">
+        <PlainLanguage desc="Return all rows from %%c1 which do not also appear in %%c2."/>
+    </Operation>
+    <Operation value="MONITORING" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="MULTI-TABLE INSERT" bitmap="BID_MULTI_TABLE_INSERT" help="450299">
+        <PlainLanguage desc="Inserts data into multiple tables."/>
+    </Operation>
+    <Operation value="NESTED LOOPS" bitmap="BID_NESTED_LOOPS" help="450142">
+        <PlainLanguage desc="For each row retrieved by %%c1, the operation in %%c2 was performed to find a matching row."/>
+        <Options>
+            <Option value="ANTI" bitmap="BID_NESTED_LOOPS" help="450014">
+                <PlainLanguage desc="For each row returned by %%c1 get the matching row from %%c2 If there are not matching rows from %%c2 return nulls for those columns."/>
+            </Option>
+            <Option value="CARTESIAN" bitmap="BID_NESTED_LOOPS_CARTESIAN" help="450035">
+                <PlainLanguage desc="For each row returned by %%c1 get the matching row from %%c2 If there are not matching rows from %%c2 return nulls for those columns."/>
+            </Option>
+            <Option value="OUTER" bitmap="BID_NESTED_LOOPS_OUTER" help="450401">
+                <PlainLanguage desc="For each row returned by %%c1 get the matching row from %%c2 If there are not matching rows from %%c2 return nulls for those columns."/>
+            </Option>
+            <Option value="PARTITION OUTER" bitmap="BID_NESTED_LOOPS_OUTER" help="450402">
+                <PlainLanguage desc="Retrieves rows from different tables using a partition outer join operation."/>
+            </Option>
+            <Option value="SEMI" bitmap="BID_NESTED_LOOPS" help="450181">
+                <PlainLanguage desc="For each row returned by %%c1 get the matching row from %%c2 If there are not matching rows from %%c2 return nulls for those columns."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="OPTIMIZER STATISTICS GATHERING" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="PARTITION" bitmap="BID_PARTITION" help="450390">
+        <Options>
+            <Option value="ALL" bitmap="" help="450391">
+                <PlainLanguage desc="All partitions of %%c0 were accessed."/>
+            </Option>
+            <Option value="CONCATENATED" bitmap="" help="450300">
+                <PlainLanguage desc="The operations in %%c0 were performed on multiple partitions of %%on."/>
+            </Option>
+            <Option value="EMPTY" bitmap="" help="450301">
+                <PlainLanguage desc="Does not perform the operation on any partition in the table."/>
+            </Option>
+            <Option value="INLIST" bitmap="BID_PARTITION_INLIST" help="450115">
+                <PlainLanguage desc="A range of partitions of %%c0 were accessed based on the values in the IN List."/>
+            </Option>
+            <Option value="INVALID" bitmap="" help="450119">
+                <PlainLanguage desc="The partition to be accessed in %%c0 is empty."/>
+            </Option>
+            <Option value="ITERATOR" bitmap="BID_PARTITION_ITERATOR" help="450121">
+                <PlainLanguage desc="Use to access multiple partitions (a subset)."/>
+            </Option>
+            <Option value="SINGLE" bitmap="BID_PARTITION_SINGLE" help="450187">
+                <PlainLanguage desc="The operations in %%c0 were performed on a single partitions of %%on."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="PARTITION COMBINED" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="PARTITION HASH" bitmap="BID_PARTITION" help="450103">
+        <Options>
+            <Option value="ALL" bitmap="" help="450009">
+                <PlainLanguage/>
+            </Option>
+            <Option value="CONCATENATED" bitmap="" help="">
+                <PlainLanguage/>
+            </Option>
+            <Option value="EMPTY" bitmap="" help="450302">
+                <PlainLanguage desc="Does not perform the operation on any partition in the table."/>
+            </Option>
+            <Option value="INLIST" bitmap="" help="450415">
+                <PlainLanguage/>
+            </Option>
+            <Option value="INVALID" bitmap="" help="450418">
+                <PlainLanguage/>
+            </Option>
+            <Option value="ITERATOR" bitmap="" help="450392">
+                <PlainLanguage/>
+            </Option>
+            <Option value="SINGLE" bitmap="" help="450187">
+                <PlainLanguage/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="PARTITION LIST" bitmap="BID_PARTITION" help="0">
+        <Options>
+            <Option value="ALL" bitmap="" help="450009">
+                <PlainLanguage desc=""/>
+            </Option>
+            <Option value="CONCATENATED" bitmap="" help="">
+                <PlainLanguage desc=""/>
+            </Option>
+            <Option value="EMPTY" bitmap="" help="450303">
+                <PlainLanguage desc="Does not perform the operation on any partition in the table."/>
+            </Option>
+            <Option value="INLIST" bitmap="" help="450416">
+                <PlainLanguage desc=""/>
+            </Option>
+            <Option value="INVALID" bitmap="" help="450419">
+                <PlainLanguage desc=""/>
+            </Option>
+            <Option value="ITERATOR" bitmap="" help="450393">
+                <PlainLanguage desc=""/>
+            </Option>
+            <Option value="OR" bitmap="" help="450304">
+                <PlainLanguage desc="Performs the operation on all table partitions in a disjunction."/>
+            </Option>
+            <Option value="SINGLE" bitmap="" help="450187">
+                <PlainLanguage desc=""/>
+            </Option>
+            <Option value="SUBQUERY" bitmap="" help="450305">
+                <PlainLanguage desc="Performs the operation on all list table partitions based on a subquery."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="PARTITION RANGE" bitmap="BID_PARTITION" help="450161">
+        <Options>
+            <Option value="ALL" bitmap="" help="450009">
+                <PlainLanguage desc=""/>
+            </Option>
+            <Option value="CONCATENATED" bitmap="" help="0">
+                <PlainLanguage desc=""/>
+            </Option>
+            <Option value="EMPTY" bitmap="" help="450306">
+                <PlainLanguage desc="Does not perform the operation on any partition in the table."/>
+            </Option>
+            <Option value="INLIST" bitmap="" help="450417">
+                <PlainLanguage desc=""/>
+            </Option>
+            <Option value="INVALID" bitmap="" help="450420">
+                <PlainLanguage desc=""/>
+            </Option>
+            <Option value="ITERATOR" bitmap="" help="450394">
+                <PlainLanguage desc="A range of partitions of %%c0 were accessed."/>
+            </Option>
+            <Option value="OR" bitmap="" help="450307">
+                <PlainLanguage desc="Performs the operation on all range table partitions in a disjunction."/>
+            </Option>
+            <Option value="SINGLE" bitmap="" help="450188">
+                <PlainLanguage desc=""/>
+            </Option>
+            <Option value="SUBQUERY" bitmap="" help="450308">
+                <PlainLanguage desc="Performs the operation on all table partitions based on a subquery."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="PARTITION REFERENCE" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="PARTITION SYSTEM" bitmap="BID_PARTITION" help="">
+        <Options>
+            <Option value="ALL" bitmap="" help="">
+                <PlainLanguage/>
+            </Option>
+            <Option value="SINGLE" bitmap="" help="">
+                <PlainLanguage/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="PART JOIN FILTER" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="PX BLOCK" bitmap="BID_PX_BLOCK_ITERATOR" help="">
+        <Options>
+            <Option value="ITERATOR" bitmap="" help="450309">
+                <PlainLanguage desc="Retrieves data from blocks after dividing the scan process between parallel scan slaves."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="PX COORDINATOR" bitmap="BID_PX_BLOCK_ITERATOR" help="450310">
+        <PlainLanguage desc="Divides the statement execution process between parallel slave processes."/>
+    </Operation>
+    <Operation value="PX ITERATOR" bitmap="BID_PX_BLOCK_ITERATOR" help="">
+        <Options>
+            <Option value="BLOCK, CHUNK" bitmap="" help="450311">
+                <PlainLanguage desc="Retrieves data from blocks or chunks after dividing the scan process between parallel scan slaves."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="PX PARTITION" bitmap="BID_PX_PARTITION" help="450312">
+        <PlainLanguage desc="Performs the operation on all table partitions after dividing the process between parallel slave processes."/>
+    </Operation>
+    <Operation value="PX PARTITION HASH" bitmap="BID_PX_PARTITION_HASH" help="">
+        <Options>
+            <Option value="ALL" bitmap="" help="450313">
+                <PlainLanguage desc="Performs the operation on all hash table partitions after dividing the process between parallel slave processes."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="PX PARTITION LIST" bitmap="BID_PX_PARTITION_LIST" help="">
+        <Options>
+            <Option value="ALL" bitmap="" help="450314">
+                <PlainLanguage desc="Performs the operation on all list table partitions after dividing the process between parallel slave processes."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="PX PARTITION RANGE" bitmap="BID_PX_PARTITION_RANGE" help="">
+        <Options>
+            <Option value="ALL" bitmap="" help="450315">
+                <PlainLanguage desc="Performs the operation on all range table partitions after dividing the process between parallel slave processes."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="PX RECEIVE" bitmap="BID_PX_RECEIVE" help="450316">
+        <PlainLanguage desc="Retrieves data from rows sent by child processes after dividing the scan process between parallel scan slaves."/>
+    </Operation>
+    <Operation value="PX PARTITION REFERENCE" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="PX SELECTOR" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="PX SEND" bitmap="" help="">
+        <Options>
+            <Option value="BROADCAST" bitmap="BID_PX_SEND_BROADCAST" help="450317">
+                <PlainLanguage desc="Sends rows to parent process for scanning by parallel scan slaves."/>
+            </Option>
+            <Option value="BROADCAST LOCAL" bitmap="BID_PX_SEND_BROADCAST_LOCAL" help="450318">
+                <PlainLanguage desc="Sends rows to local parent process for scanning by parallel scan slaves."/>
+            </Option>
+            <Option value="HASH" bitmap="BID_PX_SEND_HASH" help="450319">
+                <PlainLanguage desc="Sends rows to parent process for scanning by parallel scan slaves."/>
+            </Option>
+            <Option value="PARTITION (KEY)" bitmap="BID_PX_SEND_PARTITION_KEY" help="450320">
+                <PlainLanguage desc="Sends rows based on a partition key to parent process for scanning by parallel scan slaves."/>
+            </Option>
+            <Option value="QC (ORDER)" bitmap="BID_PX_SEND_QC_ORDER" help="450321">
+                <PlainLanguage desc="Sends ordered rows to queue coordinator process for scanning by parallel scan slaves."/>
+            </Option>
+            <Option value="QC (RANDOM)" bitmap="BID_PX_SEND_QC_RANDOM" help="450322">
+                <PlainLanguage desc="Sends random rows to queue coordinator process for scanning by parallel scan slaves."/>
+            </Option>
+            <Option value="RANGE" bitmap="BID_PX_SEND_RANGE" help="450323">
+                <PlainLanguage desc="Sends a range of rows to parent process for scanning by parallel scan slaves."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="PX TASK" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="QC SEND" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="RECURSIVE EXECUTION" bitmap="BID_RECURSIVE_EXECUTION" help="450324">
+        <PlainLanguage desc="Executes a statement with a recursive execution function call."/>
+    </Operation>
+    <Operation value="RECURSIVE ITERATION" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="RECURSIVE WITH PUMP" bitmap="BID_RECURSIVE_WITH_PUM" help="450325">
+        <PlainLanguage desc="Executes a self-join operation in hierarchical fashion."/>
+    </Operation>
+    <Operation value="REFERENCE MODEL" bitmap="BID_REFERENCE_MODEL" help="450326">
+        <PlainLanguage desc="Retrieves data from a reference table."/>
+    </Operation>
+    <Operation value="REMOTE" bitmap="BID_REMOTE" help="450162">
+        <PlainLanguage desc="The following SQL statement was sent to the remote site %%on: %%ot."/>
+    </Operation>
+    <Operation value="RESULT CACHE" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="SELECT" bitmap="BID_SELECT" help="450179">
+        <PlainLanguage desc="Rows were returned by the SELECT statement."/>
+    </Operation>
+    <Operation value="SELECT STATEMENT" bitmap="BID_SELECT" help="450179">
+        <PlainLanguage desc="Rows were returned by the SELECT statement."/>
+        <Options>
+            <Option value="REMOTE" bitmap="" help="450422">
+                <PlainLanguage desc="Rows were returned by the remote SELECT statement."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="SEQUENCE" bitmap="BID_SEQUENCE" help="450182">
+        <PlainLanguage desc="A unique sequence number was generated from the sequence %%on."/>
+        <Options>
+            <Option value="REMOTE" bitmap="" help="450423">
+                <PlainLanguage desc="Generates a unique sequence number from a remote NEXTVAL operator."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="SORT" bitmap="" help="">
+        <Options>
+            <Option value="AGGREGATE" bitmap="BID_SORT_AGGREGATE" help="450189">
+                <PlainLanguage desc="The rows were sorted to support a group operation (MAX,MIN,AVERAGE, SUM, etc)."/>
+            </Option>
+            <Option value="AGGREGATE(PARALLEL_COMBINED_WITH_PARENT)" bitmap="BID_SORT_AGGREGATE" help="450424">
+                <PlainLanguage desc="The rows were sorted to support a group operation (MAX,MIN,AVERAGE, SUM, etc)."/>
+            </Option>
+            <Option value="BUFFER" bitmap="BID_BUFFER_SORT" help="">
+                <PlainLanguage/>
+            </Option>
+            <Option value="CREATE INDEX" bitmap="BID_BUFFER_SORT" help="450327">
+                <PlainLanguage desc="Sorts rows when creating the index."/>
+            </Option>
+            <Option value="GROUP BY" bitmap="BID_SORT_GROUP_BY" help="450190">
+                <PlainLanguage desc="The rows were sorted in order to be grouped."/>
+            </Option>
+            <Option value="GROUP BY NOSORT" bitmap="BID_SORT_GROUP_BY_NO_SORT" help="450192">
+                <PlainLanguage desc="Retrieves and groups rows without sorting."/>
+            </Option>
+            <Option value="GROUP BY NOSORT ROLLUP" bitmap="BID_SORT_GROUP_BY_NO_SORT" help="450328">
+                <PlainLanguage desc="Retrieves and groups rows using the rollup operator without sorting."/>
+            </Option>
+            <Option value="GROUP BY PIVOT" bitmap="BID_SORT_GROUP_BY_NO_SORT" help="450357">
+                <PlainLanguage desc="Operation that sorts a set of rows into groups to query with a GROUP BY clause The PIVOT funtion is a pivot-specific optimization function for the SORT GROUP BY operator."/>
+            </Option>
+            <Option value="GROUP BY ROLLUP" bitmap="BID_SORT_GROUP_BY_ROLL_UP" help="450193">
+                <PlainLanguage desc="Retrieves and groups rows using the rollup operator."/>
+            </Option>
+            <Option value="GROUP BY ROLL UP" bitmap="BID_SORT_GROUP_BY_ROLL_UP" help="450193">
+                <PlainLanguage desc="Retrieves and groups rows using the rollup operator."/>
+            </Option>
+            <Option value="GROUP BY STOPKEY" bitmap="BID_COUNT_STOP_KEY" help="450329">
+                <PlainLanguage desc="Retrieves and groups rows while limiting the query to conditions defined by the stopkey."/>
+            </Option>
+            <Option value="JOIN" bitmap="BID_SORT_JOIN" help="450194">
+                <PlainLanguage desc="The rows were sorted to support the join at %%c1."/>
+            </Option>
+            <Option value="JOIN(PARALLEL_COMBINED_WITH_PARENT)" bitmap="BID_SORT_JOIN" help="450194">
+                <PlainLanguage desc="The rows were sorted to support the join at %%c1."/>
+            </Option>
+            <Option value="ORDER BY" bitmap="BID_SORT_ORDER_BY" help="450195">
+                <PlainLanguage desc="The results were sorted to support the ORDER BY clause."/>
+            </Option>
+            <Option value="ORDER BY STOPKEY" bitmap="BID_COUNT_STOP_KEY" help="450330">
+                <PlainLanguage desc="The results were sorted to support the ORDER BY STOPKEY clause."/>
+            </Option>
+            <Option value="PARTITION JOIN" bitmap="BID_SORT_JOIN" help="450331">
+                <PlainLanguage desc="Sorts rows from different tables using a partition outer join operation."/>
+            </Option>
+            <Option value="UNIQUE" bitmap="BID_SORT_UNIQUE" help="450196">
+                <PlainLanguage desc="The rows from %%c1 were sorted to eliminate duplicate rows."/>
+            </Option>
+            <Option value="UNIQUE NOSORT" bitmap="BID_SORT_UNIQUE" help="450332">
+                <PlainLanguage desc="Retrieves only unique rows without sorting."/>
+            </Option>
+            <Option value="UNIQUE STOPKEY" bitmap="BID_SORT_UNIQUE" help="450333">
+                <PlainLanguage desc="Retrieves only unique rows while limiting the query to conditions defined by the stopkey."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="SQL MODEL" bitmap="BID_SQL_MODEL" help="">
+        <Options>
+            <Option value="ACYCLIC" bitmap="" help="450334">
+                <PlainLanguage desc="Retrieves and organizes data into an AUTOMATIC ORDER SQL Model."/>
+            </Option>
+            <Option value="ACYCLIC FAST" bitmap="" help="450335">
+                <PlainLanguage desc="Retrieves and organizes data into an AUTOMATIC ORDER SQL Model using the FAST method."/>
+            </Option>
+            <Option value="ORDERED" bitmap="" help="450336">
+                <PlainLanguage desc="Retrieves and organizes data into a SEQUENTIAL ORDER SQL Model."/>
+            </Option>
+            <Option value="ORDERED FAST" bitmap="" help="450337">
+                <PlainLanguage desc="Retrieves and organizes data into a SEQUENTIAL ORDER SQL Model using the FAST method."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="STATISTICS COLLECTOR" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="TABLE ACCESS" bitmap="BID_TABLE_ACCESS" help="450216">
+        <Options>
+            <Option value="BY GLOBAL INDEX ROWID" bitmap="BID_TABLE_ACCESS_BY_GLOBAL_INDEX_ROWID" help="450217">
+                <PlainLanguage desc="Rows from table %%on were accessed using ROWID got from a global (cross-partition) index."/>
+            </Option>
+            <Option value="BY INDEX ROWID" bitmap="BID_TABLE_ACCESS_BY_INDEX_ROWID" help="450218">
+                <PlainLanguage desc="Rows from table %%on were accessed using ROWID got from an index."/>
+            </Option>
+            <Option value="BY LOCAL INDEX ROWID" bitmap="BID_TABLE_ACCESS_BY_LOCAL_INDEX_ROWID" help="450219">
+                <PlainLanguage desc="Rows from table %%on were accessed using ROWID got from a local (single-partition) index."/>
+            </Option>
+            <Option value="BY ROWID" bitmap="BID_TABLE_ACCESS_BY_ROWID" help="450220">
+                <PlainLanguage desc="Accesses rows in table %%on based on ROWIDs."/>
+            </Option>
+            <Option value="BY ROWID RANGE" bitmap="BID_TABLE_ACCESS_BY_INDEX_ROWID" help="450426">
+                <PlainLanguage desc="Rows in table %%on matching a range of ROWIDs were processed."/>
+            </Option>
+            <Option value="BY USER ROWID" bitmap="BID_TABLE_ACCESS_BY_USER_ROWID" help="450221">
+                <PlainLanguage desc="Rows in table %%on matching a ROWID provided by the 'user' (e.g., not from an index) were accessed."/>
+            </Option>
+            <Option value="CLUSTER" bitmap="BID_TABLE_ACCESS_CLUSTER" help="450222">
+                <PlainLanguage desc="Some rows in the clustered table %%on are read, using the cluster index."/>
+            </Option>
+            <Option value="FULL" bitmap="BID_TABLE_ACCESS_FULL" help="450223">
+                <PlainLanguage desc="Every row in the table %%on is read."/>
+            </Option>
+            <Option value="HASH" bitmap="BID_TABLE_ACCESS_HASH" help="450224">
+                <PlainLanguage desc="Some rows in the table %%on were read using the hash index."/>
+            </Option>
+            <Option value="SAMPLE" bitmap="BID_TABLE_ACCESS_SAMPLE" help="450226">
+                <PlainLanguage desc="A sampled set of rows are read from table %%on."/>
+            </Option>
+            <Option value="SAMPLE BY ROWID RANGE" bitmap="BID_TABLE_ACCESS_SAMPLE" help="450427">
+                <PlainLanguage desc="A sampled set of rows are read from table %%on based on a range of ROWIDs."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="TABLE QUEUE" bitmap="BID_TABLE_QUEUE" help="450338">
+        <PlainLanguage desc="Indicates use of parallel execution plan."/>
+    </Operation>
+    <Operation value="TEMP TABLE GENERATION" bitmap="BID_TEMP_TABLE_GENERATION" help="450227">
+        <PlainLanguage desc="Creates and retrieves data for a temporary table used in star transformations."/>
+    </Operation>
+    <Operation value="TEMP TABLE TRANSFORMATION" bitmap="BID_TEMP_TABLE_GENERATION" help="450339">
+        <PlainLanguage desc="Retrieves data for a temporary table used in star transformations."/>
+    </Operation>
+    <Operation value="TRANSPOSE" bitmap="BID_TRANSPOSE" help="450358">
+        <PlainLanguage desc="Transposes the results of GROUP BY to evaluate a PIVOT operation to produce the final pivoted data."/>
+    </Operation>
+    <Operation value="TRUNCATE TEMP TABLE" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="UNION" bitmap="BID_UNION" help="450244">
+        <PlainLanguage desc="Return all rows from %%c0 - excluding duplicate rows."/>
+    </Operation>
+    <Operation value="UNION-ALL" bitmap="BID_UNION_ALL" help="450245">
+        <PlainLanguage desc="Return all rows from %%c0 - including duplicate rows."/>
+        <Options>
+            <Option value="PARTITION" bitmap="" help="450428">
+                <PlainLanguage desc="Combines and retrieves all rows, including duplicates, from two tables from a partitioned view."/>
+            </Option>
+            <Option value="PUSHED PREDICATE" bitmap="" help="450429">
+                <PlainLanguage desc="Combines and retrieves all rows, including duplicates, from two tables using predicte pushing."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="UNION ALL (RECURSIVE WITH)" bitmap="" help="">
+        <Options>
+            <Option value="BREADTH FIRST" bitmap="BID_UNION_ALL_RECURSIVE_WITH_BREADTH" help="450340">
+                <PlainLanguage desc="Retrieves data from child rows only after retrieving data from all sibling rows."/>
+            </Option>
+            <Option value="DEPTH FIRST" bitmap="BID_UNION_ALL_RECURSIVE_WITH_DEPTH" help="450341">
+                <PlainLanguage desc="Retrieves data from sibling rows only after retrieving data from all child rows."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="UNKNOWN" bitmap="" help="0">
+        <PlainLanguage/>
+    </Operation>
+    <Operation value="UNPIVOT" bitmap="BID_UNPIVOT" help="450342">
+        <PlainLanguage desc="Retrieves data from columns and transposes the data into rows."/>
+    </Operation>
+    <Operation value="UPDATE" bitmap="BID_UPDATE" help="450246">
+        <PlainLanguage desc="Rows were updated."/>
+    </Operation>
+    <Operation value="UPDATE STATEMENT" bitmap="BID_UPDATE" help="450246">
+        <PlainLanguage desc="Rows were updated."/>
+        <Options>
+            <Option value="REMOTE" bitmap="" help="450431">
+                <PlainLanguage desc="Rows were remotely updated."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="VIEW" bitmap="BID_VIEW_REFERENCE" help="450260">
+        <PlainLanguage desc="A view definition was processed, either from a stored view %%on or as defined by %%c0."/>
+    </Operation>
+    <Operation value="VIEW HIERARCHY" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="VIEW PUSHED PREDICATE" bitmap="BID_VIEW_REFERENCE" help="450343">
+        <PlainLanguage desc="Pushes predicates into a temporary table used for storing query results."/>
+    </Operation>
+    <Operation value="WINDOW" bitmap="BID_WINDOW" help="450263">
+        <PlainLanguage desc="An analytic function."/>
+        <Options>
+            <Option value="BUFFER" bitmap="BID_WINDOW_BUFFER" help="450344">
+                <PlainLanguage desc="Supports an analytic function."/>
+            </Option>
+            <Option value="BUFFER PUSHED RANK" bitmap="BID_WINDOW_BUFFER" help="450345">
+                <PlainLanguage desc="Supports an analytic function while executing the RANK function."/>
+            </Option>
+            <Option value="NOSORT" bitmap="BID_WINDOW_NOSORT" help="450346">
+                <PlainLanguage desc="Retrieves data without sorting for an analytic function."/>
+            </Option>
+            <Option value="NOSORT STOPKEY" bitmap="BID_WINDOW_NOSORT" help="450347">
+                <PlainLanguage desc="Retrieves data without sorting for an analytic function. Query results are limited by conditions defined by the stopkey."/>
+            </Option>
+            <Option value="SORT" bitmap="BID_WINDOW_SORT" help="450349">
+                <PlainLanguage desc="Sorts data for an analytic function."/>
+            </Option>
+            <Option value="SORT PUSHED RANK" bitmap="BID_WINDOW_SORT" help="450348">
+                <PlainLanguage desc="Sorts data before executing the RANK function for an analytic function."/>
+            </Option>
+        </Options>
+    </Operation>
+    <Operation value="WINDOW CONSOLIDATOR" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="WINDOW (IN SQL MODEL)" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="XMLTABLE EVALUATION" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+    <Operation value="XPATH EVALUATION" bitmap="" help="">
+        <PlainLanguage desc=""/>
+    </Operation>
+</Operations>
